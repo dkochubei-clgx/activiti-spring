@@ -1,7 +1,7 @@
 package com.demo.activiti.controller;
 
 import com.demo.activiti.consumer.Consumer;
-import com.demo.activiti.consumer.InMemConsumerRepository;
+import com.demo.activiti.consumer.ConsumerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("consumer")
 public class ConsumerController {
     
-    private final InMemConsumerRepository consumerRepository;
+    private final ConsumerRepository consumerRepository;
 
     @Autowired
-    public ConsumerController(InMemConsumerRepository consumerRepository) {
+    public ConsumerController(ConsumerRepository consumerRepository) {
         this.consumerRepository = consumerRepository;
     }
     
